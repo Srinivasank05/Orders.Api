@@ -1,0 +1,13 @@
+@host = http://localhost:5080
+
+### Create
+POST {{host}}/orders
+Content-Type: application/json
+
+{ "customerId": "c1", "lines": [ { "sku": "ABC", "quantity": 2, "unitPrice": 9.5 } ] }
+
+### List
+GET {{host}}/orders?customerId=c1
+
+### Health
+GET {{host}}/health
